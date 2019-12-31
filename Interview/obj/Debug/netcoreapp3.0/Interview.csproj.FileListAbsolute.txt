@@ -1,0 +1,7 @@
+C:\projects\Interview\Interview\bin\Debug\netcoreapp3.0\Interview.deps.json
+C:\projects\Interview\Interview\bin\Debug\netcoreapp3.0\Interview.dll
+C:\projects\Interview\Interview\bin\Debug\netcoreapp3.0\Interview.pdb
+C:\projects\Interview\Interview\obj\Debug\netcoreapp3.0\Interview.AssemblyInfoInputs.cache
+C:\projects\Interview\Interview\obj\Debug\netcoreapp3.0\Interview.AssemblyInfo.cs
+C:\projects\Interview\Interview\obj\Debug\netcoreapp3.0\Interview.dll
+C:\projects\Interview\Interview\obj\Debug\netcoreapp3.0\Interview.pdb
