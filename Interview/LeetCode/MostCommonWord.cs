@@ -9,7 +9,7 @@ namespace Interview.LeetCode
         public string Find(string paragraph, string[] banned)
         {
             var banSet = new HashSet<string>(banned);
-            var world = string.Empty;
+            var word = string.Empty;
             var visited = new Dictionary<string, int>();
             for (int i = 0; i < paragraph.Length; i++)
             {
@@ -17,34 +17,34 @@ namespace Interview.LeetCode
 
                 if (currentChar == ' ' || char.IsPunctuation(currentChar))
                 {
-                    SetNewWorld(world, banSet, visited);
-                    world = string.Empty;
+                    SetNewword(word, banSet, visited);
+                    word = string.Empty;
                 }
                 else
                 {
-                    world += currentChar;
+                    word += currentChar;
                 }
             }
-            SetNewWorld(world, banSet, visited);
+            SetNewword(word, banSet, visited);
 
-            var mostVisitedWorld = string.Empty;
+            var mostVisitedword = string.Empty;
             var mostVisitedNum = 0;
             foreach (var item in visited)
             {
                 if (item.Value > mostVisitedNum)
                 {
-                    mostVisitedWorld = item.Key;
+                    mostVisitedword = item.Key;
                     mostVisitedNum = item.Value;
                 }
             }
-            return mostVisitedWorld;
+            return mostVisitedword;
         }
 
-        private void SetNewWorld(string world, HashSet<string> banSet, Dictionary<string, int> visited)
+        private void SetNewword(string word, HashSet<string> banSet, Dictionary<string, int> visited)
         {
-            if (world != string.Empty && !banSet.Contains(world.ToLower()))
+            if (word != string.Empty && !banSet.Contains(word.ToLower()))
             {
-                var key = world.ToLower();
+                var key = word.ToLower();
                 visited[key] =
                     (visited.ContainsKey(key) ? visited[key] : 0) +
                     1;
